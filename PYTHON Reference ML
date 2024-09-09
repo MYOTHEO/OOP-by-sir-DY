@@ -1,6 +1,6 @@
 class hero():
-    def __init__ (self, name, role, dmg_type, health, auto_atk_dmg):
-        self.name = name
+    def __init__ (self, name, role, dmg_type, health, auto_atk_dmg):  #parameter
+        self.name = name #arguments
         self.role = role
         self.dmg_type = dmg_type
         self.health = health
