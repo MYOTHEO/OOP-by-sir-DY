@@ -1,15 +1,16 @@
 class Animal():
-    def __init__(self, name, health):
+    def __init__(self, name, fishtype):
         self.name = name
-        self.health = health
+        self.fishtype = fishtype
     
-    def describeHero(self):
-            print(f"Brand: {self.name} has {self.health}")
+    def describeFish(self):
+            print(f"Fishname: {self.name} \nType of fish: {self.fishtype} \nConfirmation: {self.can_swim}\n")
     
-class Fish(Fish):
-    def __init__(self, name, health, can_swim):
-        super().__init__(name, health)
+class Fish(Animal):
+    def __init__(self, name, fishtype, can_swim):
+        super().__init__(name, fishtype)
         self.can_swim = can_swim
 
-miya = Fish("Miya","200","Malayuang Barilan")
+miya = Fish("Miya","Sapsap", True)
+miya.describeFish()
 print(miya.can_swim)
