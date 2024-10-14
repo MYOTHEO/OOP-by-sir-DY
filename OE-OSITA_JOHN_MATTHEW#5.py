@@ -1,6 +1,6 @@
 class BankAccount:
     def __init__(self, account_number, balance):
-        self._account_number = account_number 
+        self.__account_number = account_number 
         self.__balance = balance
         
     def deposit(self, amount):
@@ -18,14 +18,14 @@ class BankAccount:
             print("Invalid withdrawal amount or insufficient funds.")
 
     def display_account_info(self):
-        print(f"Account Number: {self._account_number}")
+        print(f"Account Number: {self.__account_number}")
         self.__display_balance() 
 
     def __display_balance(self):
         print(f"Current Balance: {self.__balance}")
 
     def get_account_number(self):
-        return self._account_number
+        return self.__account_number
 
     def get_balance(self):
         self.__display_balance()
@@ -38,7 +38,7 @@ class BankAccount:
         else:
             print("Error: Balance must be a non-negative number.")
 
-account = BankAccount("123456789", 1000.0)
-account.deposit(500.0)
+account = BankAccount("987654321", 3000.0)
+account.deposit(600.0)
 account.withdraw(300.0)
 account.display_account_info()
