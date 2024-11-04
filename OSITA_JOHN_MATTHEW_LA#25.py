@@ -13,7 +13,7 @@ class Batman(Character):
         
     @property #abstract property
     def alias(self):
-        return f"My name is {self.__alias} and I'm the Batman!"
+        return f"{self.__alias}"
 
 paniki = Batman("Bruce Wayne", "Batman")
 print(paniki.alias)
